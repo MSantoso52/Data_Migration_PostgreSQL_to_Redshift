@@ -31,5 +31,5 @@ Step-by-Step Data Migration (Manual Method):
 3. Loading the data into Redshift
 
 # *Asumption*
-1. Local database PostgreSQL with data ready to be migrate & admin authorization
+1. Local database PostgreSQL with data ready to be migrated & admin authorization
 2. AWS account with IAM with AmazonS3FullAccess, AmazonRedshiftReadOnlyAccess permissions policies
