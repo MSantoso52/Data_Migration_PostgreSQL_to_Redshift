@@ -30,7 +30,7 @@ Step-by-Step Data Migration (Manual Method):
    ```bash
    customer=# \copy transactions to '/home/mulyo/Learning/redshift/psql_transaction.csv' with (FORMAT CSV, HEADER);
 
-   ❯ la -a psql_transaction.csv
+   ❯ la psql_transaction.csv
     Permissions Size User  Date Modified Name
     .rw-rw-r--   36M mulyo 26 Nov 07:44   psql_transaction.csv
    ```
