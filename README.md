@@ -34,8 +34,10 @@ Step-by-Step Data Migration (Manual Method):
     Permissions Size User  Date Modified Name
     .rw-rw-r--   36M mulyo 26 Nov 07:44   psql_transaction.csv
    ```
-3. Uploading those files to an Amazon S3 bucket
-4. Loading the data into Redshift
+2. Uploading those files to an Amazon S3 bucket
+   * Create S3 Bucket: Console Home > Amazon S3 > Create Bucket (exp: customer-trans-bucket) > Create folder (exp: landing)
+   * Upload CSV file into S3 bucket (customer-trans-bucket > landing/) 
+5. Loading the data into Redshift
 
 # *Asumption*
 1. Local database PostgreSQL with data ready to be migrated & admin authorization
