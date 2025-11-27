@@ -14,6 +14,12 @@ Slow Analytical Queries: PostgreSQL's row-oriented storage is optimized for quic
 Migrating to Amazon Redshift directly translates to better business intelligence and decision-making capabilities.
 
 # Business Impact
-●	Faster Time to Insight: Analysts and data consumers can get results from complex queries in seconds instead of minutes or hours, accelerating the entire decision-making cycle.
+* Faster Time to Insight: Analysts and data consumers can get results from complex queries in seconds instead of minutes or hours, accelerating the entire decision-making cycle.
 * Improved Operational Performance: Moving analytical workloads off PostgreSQL eliminates resource contention, ensuring the primary transactional database remains fast and responsive for business-critical applications (e.g., customer checkouts, inventory updates).
 * Cost Optimization: Redshift's elasticity and compression can often provide a better price/performance ratio for analytics compared to over-provisioning a traditional relational database just to handle large reports.
+
+# Key Leverage Points (Why Redshift is Better for Analytics)
+* Architecture - Faster query execution for analytical queries that only read a subset of columns.
+* Storage - Reduces storage costs and improves query I/O performance.
+* Scalability - Handles exponential data growth and workload spikes automatically or easily.
+* Ecosystem - Facilitates a modern, end-to-end data lakehouse 
