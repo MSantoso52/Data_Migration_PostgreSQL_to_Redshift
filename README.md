@@ -27,8 +27,15 @@ Migrating to Amazon Redshift directly translates to better business intelligence
 # *Project Plan*
 Step-by-Step Data Migration (Manual Method):
 1. Exporting data from PostgreSQL to CSV files
-2. Uploading those files to an Amazon S3 bucket
-3. Loading the data into Redshift
+   ```bash
+   customer=# \copy transactions to '/home/mulyo/Learning/redshift/psql_transaction.csv' with (FORMAT CSV, HEADER);
+
+   ❯ la -a psql_transaction.csv
+    Permissions Size User  Date Modified Name
+    .rw-rw-r--   36M mulyo 26 Nov 07:44   psql_transaction.csv
+   ```
+3. Uploading those files to an Amazon S3 bucket
+4. Loading the data into Redshift
 
 # *Asumption*
 1. Local database PostgreSQL with data ready to be migrated & admin authorization
