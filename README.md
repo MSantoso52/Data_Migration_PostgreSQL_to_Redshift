@@ -36,9 +36,28 @@ Step-by-Step Data Migration (Manual Method):
    ```
 2. Uploading those files to an Amazon S3 bucket
    * Create S3 Bucket: Console Home > Amazon S3 > Create Bucket (exp: customer-trans-bucket) > Create folder (exp: landing)
-   * Upload CSV file into S3 bucket (customer-trans-bucket > landing/) 
+   * Upload CSV file into S3 Bucket: Console Home > Amazon S3 > customer-trans-bucket > landing/ > upload (exp: "psql_transaction.csv") 
 5. Loading the data into Redshift
-
+   * Create cluster: Console Home > Amazon Redshift > Provisioned clusters dashboard > Create cluster (exp: redshift-cluster-1)
+   * Completing cluster configuration:
+     * Cluster identifier (exp: redshift-cluster-2)
+     * Node type (exp: ra3.large)
+     * AZ configuration (exp: Single-AZ)
+     * Number of node (exp: 2)
+   * Database configuration:
+     * Admin user name (exp: aswuser)
+     * Admin password > Manually add the admin password
+     * Choose key type > AWS onwed key
+   * Associate IAM role > Create IAM role or find from existing
+   * Create user
+   * Amazon Redshift > Redshift query editor v2
+     ```sql
+     COPY dev.landing.transaction FROM 's3://customer-trans-bucket/landing/psql_transaction.csv' IAM_ROLE 'arn:aws:iam::************:role/service-role/AmazonRedshift-CommandsAccessRole-****************' FORMAT AS CSV DELIMITER ',' QUOTE '"' IGNOREHEADER 1 REGION AS 'ap-southeast-3';
+     
+     SELECT * FROM dev.landing.transaction LIMIT 10;
+     ```
 # *Asumption*
 1. Local database PostgreSQL with data ready to be migrated & admin authorization
-2. AWS account with IAM with AmazonS3FullAccess, AmazonRedshiftReadOnlyAccess permissions policies
+2. AWS account with IAM with permissions policies:
+   * AmazonS3FullAccess
+   * AmazonRedshiftReadOnlyAccess 
