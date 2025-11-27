@@ -23,3 +23,13 @@ Migrating to Amazon Redshift directly translates to better business intelligence
 * Storage - Reduces storage costs and improves query I/O performance.
 * Scalability - Handles exponential data growth and workload spikes automatically or easily.
 * Ecosystem - Facilitates a modern, end-to-end data lakehouse 
+
+# *Project Plan*
+Step-by-Step Data Migration (Manual Method):
+1. Exporting data from PostgreSQL to CSV files
+2. Uploading those files to an Amazon S3 bucket
+3. Loading the data into Redshift
+
+# *Asumption*
+1. Local database PostgreSQL with data ready to be migrate & admin authorization
+2. AWS account with IAM with AmazonS3FullAccess, AmazonRedshiftReadOnlyAccess permissions policies
