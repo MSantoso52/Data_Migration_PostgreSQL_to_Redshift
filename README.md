@@ -3,7 +3,7 @@ Data migration from local PostgreSQL database to cloud data warehouse AWS Redshi
 ![project flow](screenshot/project_flow.png)
 
 # *Project Overview*
-Data migration from local database using PostgreSQL to cloud data warehouse AWS Redshift.Data migration from PostgreSQL (typically an OLTP-Online Transactional Processing-database) to Amazon Redshift (a columnar OLAP-Online Analytical Processing-data warehouse) is common for leveraging high-performance analytics. This project we will use easiest way, manual process using S3 Bucket and the Redshift COPY command. 
+Data migration from PostgreSQL to cloud data warehouse AWS Redshift.Data migration from PostgreSQL (typically an OLTP-Online Transactional Processing-database) to Amazon Redshift (a columnar OLAP-Online Analytical Processing-data warehouse) is common for leveraging high-performance analytics. This project we will use easiest way, manual process using S3 Bucket and the Redshift COPY command. 
 
 # *Problem to be Solved*
 * The core problem is the limitations of a relational OLTP database (PostgreSQL) when facing massive-scale analytical queries.
