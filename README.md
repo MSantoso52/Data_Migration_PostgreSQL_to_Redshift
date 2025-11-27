@@ -1,5 +1,5 @@
 # Data_Migration_PostgreSQL_to_Redshift
-Data migration from local database using PostgreSQL to cloud data warehouse AWS Redshift.
+Data migration from local PostgreSQL database to cloud data warehouse AWS Redshift.
 ![project flow](screenshot/project_flow.png)
 
 # *Project Overview*
